@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction : column;
+}
+
+#grid {
+    display: flex;
+    flex: 0 0 960px;
+    border: 1px solid red;
+    background-color: gray;
+    height:960px;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cell { 
+    flex: 1;
+    border: 1px solid black;
+}
