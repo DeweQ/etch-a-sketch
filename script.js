@@ -1,8 +1,11 @@
 try {
 
 const grid = document.querySelector("#container");
+grid.addEventListener("mouseover", e => {
+  if (e.target.classList.contains("cell"))
+    draw(e.target,"black");
+});
 let flexSheet = document.querySelector("#flex-sheet");
-
 function generateGrid(size) {
   grid.innerHtml = "";
   for (let i = 0; i < size * size; i++) {
@@ -20,7 +23,12 @@ function updateFlexSheet(size) {
     document.head.appendChild(flexSheet);
     flexSheet.sheet.insertRule(`.adjust-flex-basis { flex: 0 0 calc(100% / ${size});}`);
 }
-generateGrid(8);
+
+function draw(target,color) {
+  target.style.backgroundColor = color;
+}
+generateGrid(16);
+
 } catch(e) {alert(e); }
 
 
