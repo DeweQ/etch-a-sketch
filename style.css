@@ -3,17 +3,33 @@ body {
     flex-direction : column;
 }
 
-#grid {
+:root {
+    --container-size: 960px;
+}
+
+#container {
     display: flex;
-    flex: 0 0 960px;
-    border: 1px solid red;
-    background-color: gray;
-    height:960px;
-    flex-direction: column;
-    gap: 2px;
+    width: var(--container-size);
+    height: var(--container-size);
+    background-color: gray;    
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .cell { 
-    flex: 1;
     border: 1px solid black;
+    font-size: 5px;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    flex: 0;
+    aspect-ratio: 1 / 1;
+    align-items: stretch ;
+    box-sizing: border-box;
+}
+
+.cell:before {
+  content: '';
+  display: table;
+  padding-top: 100%;
 }
