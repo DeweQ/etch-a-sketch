@@ -1,5 +1,3 @@
-try {
-
 const grid = document.querySelector("#container");
 grid.addEventListener("mouseover", e => {
   if (e.target.classList.contains("cell"))
@@ -51,8 +49,3 @@ function getRandomColor() {
   return "#"+parseInt(Math.random()*16581475).toString(16).padStart(6,"0");
 }
 generateGrid(gridSize);
-
-} catch(e) {alert(e); }
-
-
-
