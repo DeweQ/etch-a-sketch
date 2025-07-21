@@ -3,7 +3,7 @@ try {
 const grid = document.querySelector("#container");
 grid.addEventListener("mouseover", e => {
   if (e.target.classList.contains("cell"))
-    draw(e.target,"black");
+    draw(e.target,getRandomColor());
 });
 let gridSize = 16;
 let flexSheet = document.querySelector("#flex-sheet");
@@ -45,6 +45,10 @@ function updateFlexSheet(size) {
 
 function draw(target,color) {
   target.style.backgroundColor = color;
+}
+
+function getRandomColor() {
+  return "#"+parseInt(Math.random()*16581475).toString(16).padStart(6,"0");
 }
 generateGrid(gridSize);
 

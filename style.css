@@ -4,7 +4,7 @@ body {
 }
 
 :root {
-    --container-size: 960px;
+    --container-size: 800px;
 }
 
 #container {
